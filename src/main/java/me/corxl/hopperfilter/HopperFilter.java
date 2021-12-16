@@ -13,7 +13,6 @@ public final class HopperFilter extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // Plugin startup logic
         plugin = this;
 
         this.getCommand("hopperfilter").setExecutor(new HopperListenerCommand());
@@ -23,10 +22,5 @@ public final class HopperFilter extends JavaPlugin {
 
     public static HopperFilter getPlugin() {
         return plugin;
-    }
-
-    @Override
-    public void onDisable() {
-        // Plugin shutdown logic
     }
 }
