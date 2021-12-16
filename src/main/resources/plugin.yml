@@ -1,0 +1,30 @@
+name: HopperFilter
+version: '${project.version}'
+main: me.corxl.hopperfilter.HopperFilter
+api-version: 1.18
+authors: [ Corxl ]
+commands:
+  hopperfilter:
+    aliases: hf
+    permission: hopperfilter.use
+    permission-message: §o§cYou do not have permission to use hopperfilter!
+
+permissions:
+  hopperfilter.use:
+    description: Allows users to use the /hopperfilter command
+
+  hopperfilter.whitelist:
+    description: Allows users to add items to a hopper's whitelist
+
+  hopperfilter.blacklist:
+    description: Allows users to add items to a hopper's blacklist
+
+  hopperfilter.clear:
+    description: Allows users to clear a hopper's whitelist
+
+  hopperfilter.*:
+    children:
+      hopperfilter.whitelist: true
+      hopperfilter.clear: true
+      hopperfilter.use: true
+      hopperfilter.cancel: true
